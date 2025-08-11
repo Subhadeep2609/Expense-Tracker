@@ -1,0 +1,141 @@
+/* Reset & Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 650px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #2193b0;
+    letter-spacing: 1px;
+}
+
+/* Form Styling */
+input[type="text"],
+select,
+input[type="number"],
+input[type="submit"] {
+    margin-bottom: 12px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus,
+input[type="number"]:focus {
+    border-color: #2193b0;
+    box-shadow: 0 0 8px rgba(33, 147, 176, 0.4);
+    outline: none;
+}
+
+input[type="submit"] {
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.03);
+    background: linear-gradient(135deg, #45a049, #3d8b40);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #2193b0;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+tbody tr:hover {
+    background-color: #f1faff;
+}
+
+/* Simple Delete Button inside same cell */
+.delete-btn {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+    color: darkred;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
